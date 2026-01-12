@@ -1,59 +1,263 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel E-commerce Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+An **E-commerce web application** built with **Laravel**, **Vue.js**, and **Inertia.js**, using the **AdminLTE** theme for the admin dashboard UI.
 
-## About Laravel
+This project demonstrates role-based access control, product & order management, and a modern Laravel + Vue SPA experience.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Authentication & Authorization
 
-## Learning Laravel
+* User registration & login
+* Role & permission management
+* Admin can create users and assign permissions
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Admin Panel
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Manage users
+* Create & manage categories
+* Create & manage products
+* Create (book) orders for users
+* View all orders in the system
 
-## Laravel Sponsors
+### User Panel
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* User authentication
+* Users can place orders
+* Users can view **only their own orders**
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠 Tech Stack
 
-## Contributing
+* **Backend:** Laravel
+* **Frontend:** Vue.js + Inertia.js
+* **UI Theme:** AdminLTE
+* **Database:** MySQL
+* **Build Tool:** Vite
+* **Authentication:** Laravel Auth
+* **Package Manager:** Composer & NPM
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🚀 Demo
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Admin Panel
 
-## Security Vulnerabilities
+```
+URL: http://127.0.0.1:8000
+Email: admin@test.com
+Password: password
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+> ⚠️ Demo URL works only after running the project locally.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📦 Installation
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* PHP **8.2+** (recommended)
+* MySQL
+* Composer
+* Node.js (v18+ recommended)
+* NPM
+
+---
+
+### Setup Instructions
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+   ```
+
+2. **Checkout the orders branch**
+
+   ```bash
+   git checkout orders
+   ```
+
+3. **Create environment file**
+
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Configure database in `.env`**
+
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_database_user
+   DB_PASSWORD=your_database_password
+   ```
+
+5. **Install PHP dependencies**
+
+   ```bash
+   composer install
+   ```
+
+6. **Generate application key**
+
+   ```bash
+   php artisan key:generate
+   ```
+
+7. **Run migrations & seeders**
+
+   ```bash
+   php artisan migrate --seed
+   ```
+
+8. **Create storage symbolic link**
+	```bash
+   php artisan migrate --seed
+   ```
+
+9. **Install Node dependencies**
+
+   ```bash
+   npm install
+   ```
+
+   If you encounter dependency issues:
+
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+
+10. **Start the Vite development server**
+
+   ```bash
+   npm run dev
+   ```
+
+11. **Start the Laravel development server**
+
+    ```bash
+    php artisan serve
+    ```
+
+12. **Access the application**
+
+    ```
+    http://127.0.0.1:8000
+    ```
+
+---
+
+## 👤 Default Admin Credentials
+
+```text
+Email: admin@test.com
+Password: password
+```
+
+---
+
+## 📁 Project Structure (Highlights)
+
+* `app/Models` – Eloquent models
+* `app/Http/Controllers` – Application controllers
+* `resources/js` – Vue.js & Inertia frontend
+* `resources/views` – Blade layouts (AdminLTE)
+* `routes/web.php` – Web routes
+* `database/seeders` – Demo data & admin user
+
+---
+
+## 🧪 Database Seeding
+
+The project includes seeders that:
+
+* Create an admin user
+* Create sample users
+* Populate roles & permissions
+
+---
+
+## ⚠️ Common Issues
+
+* **Vite not loading?**
+  Make sure `npm run dev` is running.
+
+* **Permission denied on storage/logs?**
+
+  ```bash
+  chmod -R 775 storage bootstrap/cache
+  ```
+
+* **Key not set error?**
+
+  ```bash
+  php artisan key:generate
+  ```
+
+---
+
+## 📌 Future Improvements (Optional)
+
+* Order payment integration
+* Order status tracking
+* API support for mobile apps
+* Unit & feature tests
+
+
+---
+
+## 📸 Screenshots
+
+> Below are some screenshots showcasing the main features of the application.
+
+### 🔐 Login Page
+
+![Login Page](screenshots/login.png)
+
+---
+
+### 🏠 Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+---
+
+### 👥 User Management (Admin)
+
+![User Management](screenshots/users.png)
+
+---
+
+### 🗂 Category Management
+
+![Category Management](screenshots/categories.png)
+
+---
+
+### 📦 Product Management
+
+![Product Management](screenshots/products.png)
+
+---
+
+### 🛒 Orders Management (Admin)
+
+![Orders Management](screenshots/orders-admin.png)
+
+---
+
+### 👤 User Orders View
+
+![User Orders](screenshots/orders-user.png)
+
+---

@@ -1,6 +1,6 @@
-# Laravel E-commerce Website
+# Laravel Product & Order Management System
 
-An **E-commerce web application** built with **Laravel**, **Vue.js**, and **Inertia.js**, using the **AdminLTE** theme for the admin dashboard UI.
+An **Product & Order Management web application** built with **Laravel**, **Vue.js**, and **Inertia.js**, using the **AdminLTE** theme for the admin dashboard UI.
 
 This project demonstrates role-based access control, product & order management, and a modern Laravel + Vue SPA experience.
 
